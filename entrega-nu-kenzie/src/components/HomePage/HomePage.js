@@ -1,9 +1,9 @@
 import { useState } from "react";
-import Logo from "./assests/Logo.png";
-import { Form } from "./components/Form/Form";
-import { List } from "./components/List/List";
-import { TotalMoney } from "./components/TotalMoney/TotalMoney";
-export const HomePage = () => {
+import Logo from "../../assests/Logo.png";
+import { Form } from "../../components/Form/Form";
+import { List } from "../../components/List/List";
+import { TotalMoney } from "../../components/TotalMoney/TotalMoney";
+export const HomePage = ({ setLandingPage }) => {
   const [listTransactions, setListTransactions] = useState([]);
   function removeItem(index) {
     const temp = [...listTransactions];
@@ -13,7 +13,10 @@ export const HomePage = () => {
   return (
     <>
       <header className="App-header">
-        <img src={Logo}></img>
+        <img src={Logo} />
+        <button onClick={() => setLandingPage(true)} className="logoutButton">
+          Inicio
+        </button>
       </header>
       <div className="appBody">
         <div className="formAndTotalBox">

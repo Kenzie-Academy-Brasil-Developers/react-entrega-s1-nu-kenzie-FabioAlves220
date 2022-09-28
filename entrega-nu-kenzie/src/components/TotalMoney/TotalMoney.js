@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 export const TotalMoney = ({ listTransactions }) => {
+  console.log(listTransactions);
   const total = listTransactions.reduce((acc, transaction) => {
     if (transaction.type === "saida") {
       return acc - Number(transaction.value);
