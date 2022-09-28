@@ -8,5 +8,14 @@ export const TotalMoney = ({ listTransactions }) => {
       return acc + Number(transaction.value);
     }
   }, 0);
-  console.log(total);
+
+  return (
+    <div className="totalBox">
+      <div className="totalInfo">
+        <h2 className="totalLabel">Valor total:</h2>
+        <h2 className="totalValue">{`R$ ${total}`}</h2>
+      </div>
+      <p>O valor se refere ao saldo</p>
+    </div>
+  );
 };

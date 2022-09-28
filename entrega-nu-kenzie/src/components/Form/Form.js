@@ -3,36 +3,55 @@ import { useState } from "react";
 export const Form = ({ listTransactions, setListTransactions }) => {
   const [value, setValue] = useState("");
   const [description, setDescription] = useState("");
-  const [type, setType] = useState("");
+  const [type, setType] = useState("entrada");
 
   function handleSubmit(event) {
     event.preventDefault();
 
     // console.log(value, description);
-    setListTransactions([...listTransactions, { value, description, type }]);
-    console.log(listTransactions);
+    setListTransactions(() => [
+      ...listTransactions,
+      { value, description, type },
+    ]);
   }
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <form className="form" onSubmit={handleSubmit}>
+      <div className="descriptionBox">
+        <h4 className="label">Descrição</h4>
         <input
+          className="inputs description"
           type="text"
-          placeholder="valor"
-          value={value}
-          onChange={(event) => setValue(event.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="descrição"
+          placeholder="digite aqui sua descrição"
           description={description}
           onChange={(event) => setDescription(event.target.value)}
         />
-        <select onChange={(event) => setType(event.target.value)}>
-          <option value="entrada">entrada</option>
-          <option value="saida">saida</option>
-        </select>
-        <button type="submit">Adicionar transação</button>
-      </form>
-    </div>
+        <span className="descriptionEx">Ex: Compra de Roupas</span>
+      </div>
+      <div className="transactionBox">
+        <div className="holder1">
+          <h4>Valor</h4>
+          <input
+            className="inputs valor"
+            type="text"
+            placeholder="R$"
+            value={value}
+            onChange={(event) => setValue(event.target.value)}
+          />
+        </div>
+        <div className="holder2">
+          <h4>Tipo de transação</h4>
+          <select
+            className="inputs"
+            onChange={(event) => setType(event.target.value)}
+          >
+            <option value="entrada">entrada</option>
+            <option value="saida">saida</option>
+          </select>
+        </div>
+      </div>
+      <button className="submitButton" type="submit">
+        Inserir Valor
+      </button>
+    </form>
   );
 };

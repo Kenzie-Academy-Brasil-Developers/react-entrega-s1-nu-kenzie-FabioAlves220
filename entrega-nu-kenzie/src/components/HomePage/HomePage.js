@@ -1,22 +1,17 @@
 import { useState } from "react";
-import "./App.css";
+import Logo from "./assests/Logo.png";
 import { Form } from "./components/Form/Form";
 import { List } from "./components/List/List";
 import { TotalMoney } from "./components/TotalMoney/TotalMoney";
-import Logo from "./assests/Logo.png";
-import { LandingPage } from "./components/LandingPage/LandingPage";
-
-function App() {
+export const HomePage = () => {
   const [listTransactions, setListTransactions] = useState([]);
   function removeItem(index) {
     const temp = [...listTransactions];
     temp.splice(index, 1);
     setListTransactions(temp);
   }
-
   return (
-    <div className="App">
-      <LandingPage />
+    <>
       <header className="App-header">
         <img src={Logo}></img>
       </header>
@@ -43,8 +38,6 @@ function App() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
-}
-
-export default App;
+};

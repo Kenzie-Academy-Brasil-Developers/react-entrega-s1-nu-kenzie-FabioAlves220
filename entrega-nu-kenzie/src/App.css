@@ -1,10 +1,24 @@
 .App {
   text-align: center;
 }
+ol,
+ul {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0 0 0 0;
+}
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.appBody {
+  display: flex;
+  gap: 50px;
+  padding-left: 21%;
+  padding-right: 21%;
+  box-sizing: border-box;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -14,20 +28,358 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #f8f9fa;
+  box-shadow: 0px 4px 32px -12px rgba(0, 0, 0, 0.25);
+  min-height: 88px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  padding-left: 21%;
+  padding-right: 21%;
+  box-sizing: border-box;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+.form {
+  margin-top: 39px;
+  width: 363px;
+  display: flex;
+  flex-direction: column;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 38px;
+  padding-bottom: 38px;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.descriptionBox {
+  width: 314px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.label {
+  width: 52px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+}
+.descriptionEx {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: #868e96;
+}
+.holder1 > h4 {
+  align-items: flex-start;
+  text-align: start;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+  color: #212529;
+}
+.holder2 > h4 {
+  align-items: flex-start;
+  text-align: start;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+  color: #212529;
+}
+.holder2 > select {
+  margin: 0 auto;
+}
+.inputs {
+  border: 2px solid #f8f9fa;
+  border-radius: 2px;
+  background: #f8f9fa;
+}
+.inputs.description {
+  width: 314px;
+}
+.inputs.valor {
+  width: 128px;
+  padding-right: 11px;
+  box-sizing: border-box;
+}
+.inputs.valor::placeholder {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #343a40;
+  text-align: end;
+  padding-right: 11px;
+  box-sizing: border-box;
+}
+.inputs::placeholder {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #868e96;
+}
+.transactionBox {
+  margin-top: 17px;
+  display: flex;
+  justify-content: space-between;
+}
+.holder1 > h4 {
+  margin: 0 auto;
+}
+.holder2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.holder2 > h4 {
+  margin: 0 auto;
+}
+.submitButton {
+  margin-top: 19px;
+  width: 314px;
+  height: 48px;
+  border: 2px solid #fd377e;
+  border-radius: 8px;
+  background: #fd377e;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+  cursor: pointer;
+}
 .App-link {
   color: #61dafb;
 }
-
+.filterBox {
+  margin-top: 39px;
+  width: 560px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.filterBox > h2 {
+  margin-right: 20px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  color: #212529;
+  white-space: nowrap;
+}
+.buttonBox {
+  height: 40px;
+  display: flex;
+  gap: 16px;
+}
+.buttonBox > button {
+  width: 87px;
+  height: 40px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  color: black;
+  border: 1.4px solid #e9ecef;
+  border-radius: 4px;
+  background: #e9ecef;
+  cursor: pointer;
+}
+.buttonBox > button:hover {
+  background: #fd377e;
+  border: 1.4px solid #fd377e;
+  color: white;
+}
+.listBox {
+  margin: 0 auto;
+}
+.listItem {
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.typeColorGreen {
+  width: 4px;
+  height: 87px;
+  background: #03b898;
+  border-radius: 4px 0px 0px 4px;
+}
+.typeColorGrey {
+  width: 4px;
+  height: 87px;
+  background: #e9ecef;
+  border-radius: 4px 0px 0px 4px;
+}
+.infoBox {
+  width: 556px;
+  height: 87px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: #f8f9fa;
+  border-radius: 4px;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-top: 8px;
+  padding-bottom: 12px;
+  box-sizing: border-box;
+}
+.info1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.info1 > h2 {
+  margin: 0 auto;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  color: #212529;
+}
+.spanType {
+  margin-top: 5px;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+  color: #343a40;
+}
+.spanValue {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+  color: #212529;
+}
+.info2 {
+  display: flex;
+  gap: 50px;
+}
+.info2 > button {
+  background: #e9ecef;
+  border-radius: 2.5px;
+  border-style: none;
+  cursor: pointer;
+}
+.formAndTotalBox {
+}
+.totalBox {
+  margin-top: 16px;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  background: #ffffff;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+}
+.totalBox > p {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+  color: #343a40;
+  text-align: start;
+}
+.totalInfo {
+  display: flex;
+  justify-content: space-between;
+}
+.totalLabel {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  color: #212529;
+}
+.totalValue {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  color: #fd377e;
+}
+.landing {
+  width: 100vw;
+  height: 100vh;
+  background: #212529;
+  border-radius: 8px;
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+}
+.landingBox1 {
+  display: flex;
+  flex-direction: column;
+  max-width: 347px;
+}
+.landingBox1 > img {
+  width: 122px;
+  height: 20px;
+}
+.landingBox1 > h1 {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 38px;
+  line-height: 48px;
+  color: #ffffff;
+  white-space: normal;
+  text-align: start;
+}
+.landingBox1 > p {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #ffffff;
+  text-align: start;
+}
+.landingButton {
+  width: 241px;
+  height: 48px;
+  background: #fd377e;
+  border: 2px solid #fd377e;
+  border-radius: 8px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+  cursor: pointer;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
