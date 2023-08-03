@@ -428,6 +428,26 @@ ul {
   }
 }
 
+@media screen and (max-width: 882px) {
+  .landing {
+    flex-direction: column;
+  }
+  .landingBox1 {
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+  }
+  .landingBox2 > img {
+    position: fixed;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 50%;
+  }
+}
+
 @media screen and (max-width: 510px) {
   .App-header {
     padding-left: 10px;
