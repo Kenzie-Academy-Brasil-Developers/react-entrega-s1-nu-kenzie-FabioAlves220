@@ -15,9 +15,9 @@ ul {
 
 .appBody {
   display: flex;
-  gap: 50px;
-  padding-left: 21%;
-  padding-right: 21%;
+  justify-content: space-between;
+  padding-left: 10%;
+  padding-right: 10%;
   box-sizing: border-box;
 }
 
@@ -30,10 +30,11 @@ ul {
 .App-header {
   background-color: #f8f9fa;
   box-shadow: 0px 4px 32px -12px rgba(0, 0, 0, 0.25);
+  width: 100vw;
   min-height: 88px;
   display: flex;
-  padding-left: 21%;
-  padding-right: 21%;
+  padding-left: 10%;
+  padding-right: 10%;
   box-sizing: border-box;
   align-items: center;
   justify-content: space-between;
@@ -57,6 +58,7 @@ ul {
 .form {
   margin-top: 39px;
   width: 363px;
+  min-width: 363px;
   display: flex;
   flex-direction: column;
   padding-left: 25px;
@@ -73,12 +75,15 @@ ul {
   flex-direction: column;
   align-items: flex-start;
 }
+.descriptionBox > h4 {
+  margin: 0px 0px 10px 0px;
+}
 .label {
   width: 52px;
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 22px;
 }
 .descriptionEx {
@@ -99,6 +104,7 @@ ul {
   line-height: 22px;
   color: #212529;
 }
+
 .holder2 > h4 {
   align-items: flex-start;
   text-align: start;
@@ -110,7 +116,7 @@ ul {
   color: #212529;
 }
 .holder2 > select {
-  margin: 0 auto;
+  width: 100px;
 }
 .inputs {
   border: 2px solid #f8f9fa;
@@ -118,7 +124,9 @@ ul {
   background: #f8f9fa;
 }
 .inputs.description {
-  width: 314px;
+  width: 310px;
+  margin: 0px;
+  padding: 0px;
 }
 .inputs.valor {
   width: 128px;
@@ -129,7 +137,7 @@ ul {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 26px;
   color: #343a40;
   text-align: end;
@@ -181,14 +189,19 @@ ul {
 }
 .filterBox {
   margin-top: 39px;
-  width: 560px;
+  width: auto;
   height: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
+.resumoFinanceiro {
+  box-sizing: border-box;
+}
+
 .filterBox > h2 {
-  margin-right: 20px;
+  margin-right: 5px;
   font-family: "Nunito";
   font-style: normal;
   font-weight: 700;
@@ -196,6 +209,7 @@ ul {
   line-height: 30px;
   color: #212529;
   white-space: nowrap;
+  box-sizing: border-box;
 }
 .buttonBox {
   height: 40px;
@@ -203,7 +217,9 @@ ul {
   gap: 16px;
 }
 .buttonBox > button {
-  width: 87px;
+  width: auto;
+  padding-left: 5px;
+  padding-right: 5px;
   height: 40px;
   font-family: "Nunito";
   font-style: normal;
@@ -392,6 +408,41 @@ ul {
   color: #ffffff;
   cursor: pointer;
 }
+
+@media screen and (max-width: 951px) {
+  .App-header {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+  .appBody {
+    flex-direction: column;
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+  .buttonBox {
+    gap: 5px;
+  }
+
+  .totalBox {
+    width: 363px;
+  }
+}
+
+@media screen and (max-width: 510px) {
+  .App-header {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .formAndTotalBox {
+    margin: 0 auto;
+    width: auto;
+  }
+  .appBody {
+    padding: 0px;
+    justify-content: center;
+  }
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
