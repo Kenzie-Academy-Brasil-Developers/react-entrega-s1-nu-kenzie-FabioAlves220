@@ -450,15 +450,15 @@ ul {
   }
   .landingBox1 {
     position: fixed;
-    top: 25%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 9999;
   }
   .landingBox2 > img {
     position: fixed;
-    top: 70%;
-    left: 50%;
+    top: 78%;
+    left: 43%;
     transform: translate(-50%, -50%);
     opacity: 50%;
   }
@@ -470,12 +470,18 @@ ul {
     padding-right: 10px;
   }
   .formAndTotalBox {
-    margin: 0 auto;
-    width: auto;
+    margin-left: 6px;
   }
   .appBody {
     padding: 0px;
     justify-content: center;
+  }
+  .filterBox {
+    width: 95%;
+    margin-left: 6px;
+  }
+  .listBox {
+    width: 95%;
   }
 }
 
