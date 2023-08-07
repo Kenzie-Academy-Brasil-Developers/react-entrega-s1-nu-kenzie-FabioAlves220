@@ -6,7 +6,7 @@ export const Card = ({ transaction, onDelete }) => {
         <div className="infoBox">
           <div className="info1">
             <h2>{transaction.description}</h2>
-            <span className="spanType">{transaction.type}</span>
+            <span className="spanTypeGreen">{transaction.type}</span>
           </div>
           <div className="info2">
             <span className="spanValue">{`R$ ${transaction.value}`}</span>
@@ -18,11 +18,11 @@ export const Card = ({ transaction, onDelete }) => {
   } else {
     return (
       <li className="listItem">
-        <div className="typeColorGrey"></div>
+        <div className="typeColorRed"></div>
         <div className="infoBox">
           <div className="info1">
             <h2>{transaction.description}</h2>
-            <span className="spanType">{transaction.type}</span>
+            <span className="spanTypeRed">{transaction.type}</span>
           </div>
           <div className="info2">
             <span className="spanValue">{`R$ ${transaction.value}`}</span>

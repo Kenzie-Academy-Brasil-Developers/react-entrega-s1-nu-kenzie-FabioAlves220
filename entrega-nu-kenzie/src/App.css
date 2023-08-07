@@ -116,7 +116,10 @@ ul {
   color: #212529;
 }
 .holder2 > select {
-  width: 100px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 75px;
 }
 .inputs {
   border: 2px solid #f8f9fa;
@@ -128,6 +131,10 @@ ul {
   margin: 0px;
   padding: 0px;
 }
+
+.inputs.description::placeholder {
+  font-size: 10px;
+}
 .inputs.valor {
   width: 128px;
   padding-right: 11px;
@@ -137,7 +144,7 @@ ul {
   font-family: "Inter";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 26px;
   color: #343a40;
   text-align: end;
@@ -252,10 +259,10 @@ ul {
   background: #03b898;
   border-radius: 4px 0px 0px 4px;
 }
-.typeColorGrey {
+.typeColorRed {
   width: 4px;
   height: 87px;
-  background: #e9ecef;
+  background: #ff0000;
   border-radius: 4px 0px 0px 4px;
 }
 .infoBox {
@@ -287,14 +294,23 @@ ul {
   line-height: 30px;
   color: #212529;
 }
-.spanType {
+.spanTypeGreen {
   margin-top: 5px;
   font-family: "Nunito";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 22px;
-  color: #343a40;
+  color: #078657;
+}
+
+.spanTypeRed {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 22px;
+  color: #ff0000;
 }
 .spanValue {
   font-family: "Nunito";

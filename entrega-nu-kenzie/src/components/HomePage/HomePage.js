@@ -5,10 +5,16 @@ import { List } from "../../components/List/List";
 import { TotalMoney } from "../../components/TotalMoney/TotalMoney";
 export const HomePage = ({ setLandingPage }) => {
   const [listTransactions, setListTransactions] = useState([]);
+  const [filter, setFilter] = useState("todos");
+  //----------
   function removeItem(index) {
     const temp = [...listTransactions];
     temp.splice(index, 1);
     setListTransactions(temp);
+  }
+  //----------
+  function handleFilterClick(type) {
+    setFilter(type);
   }
   return (
     <>
@@ -31,13 +37,21 @@ export const HomePage = ({ setLandingPage }) => {
           <div className="filterBox">
             <h2>Resumo financeiro</h2>
             <div className="buttonBox">
-              <button>Todos</button>
-              <button>Entradas</button>
-              <button>Despesas</button>
+              <button onClick={() => handleFilterClick("todos")}>Todos</button>
+              <button onClick={() => handleFilterClick("entrada")}>
+                Entradas
+              </button>
+              <button onClick={() => handleFilterClick("saida")}>
+                Despesas
+              </button>
             </div>
           </div>
           <div className="listBox">
-            <List listTransactions={listTransactions} removeItem={removeItem} />
+            <List
+              listTransactions={listTransactions}
+              removeItem={removeItem}
+              filter={filter}
+            />
           </div>
         </div>
       </div>

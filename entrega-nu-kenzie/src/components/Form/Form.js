@@ -8,7 +8,6 @@ export const Form = ({ listTransactions, setListTransactions }) => {
   function handleSubmit(event) {
     event.preventDefault();
 
-    // console.log(value, description);
     setListTransactions(() => [
       ...listTransactions,
       { value, description, type },
